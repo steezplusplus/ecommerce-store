@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer className="bg-white border-t">
+    <footer className='border-t bg-white'>
       <p>Placeholder footer</p>
     </footer>
   );
