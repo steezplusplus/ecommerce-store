@@ -3,13 +3,11 @@
 import { useParams, usePathname } from 'next/navigation';
 import Link from 'next/link';
 
+import { Category } from '@/types';
 import { cn } from '@/lib/utils';
 
 type NavLinksProps = {
-  data: {
-    name: string;
-    id: string;
-  }[];
+  categories: Category[];
 };
 
 type Routes = {
@@ -19,14 +17,13 @@ type Routes = {
 }[];
 
 export function NavLinks(props: NavLinksProps) {
-  const { data } = props;
-  const params = useParams();
+  const { categories } = props;
   const pathName = usePathname();
 
-  const routes: Routes = data.map((route) => ({
-    label: route.name,
-    href: `/category/${route.id}`,
-    active: pathName.startsWith(`/category/${route.id}`),
+  const routes: Routes = categories.map((category) => ({
+    label: category.name,
+    href: `/category/${category.id}`,
+    active: pathName.startsWith(`/category/${category.id}`),
   }));
 
   return (

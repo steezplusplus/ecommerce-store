@@ -3,14 +3,24 @@ import Link from 'next/link';
 import { Container } from '@/components/ui/container';
 import { NavLinks } from './nav-links';
 
-const data = [
+const categories = [
   {
-    name: 'Link1',
-    id: 'link1',
+    name: 'Link 1',
+    id: 'link-1',
+    billboard: {
+      id: 'billboard-1',
+      name: 'Billboard 1',
+      imageUrl: 'www.fakeurl.com',
+    },
   },
   {
-    name: 'Link2',
-    id: 'link2',
+    name: 'Link 2',
+    id: 'link-2',
+    billboard: {
+      id: 'billboard-2',
+      name: 'Billboard 2',
+      imageUrl: 'www.fakeurl.com',
+    },
   },
 ];
 
@@ -24,7 +34,7 @@ export function Nav() {
               <h1 className='text-xl font-bold'>STORE</h1>
             </Link>
           </li>
-          <NavLinks data={data} />
+          <NavLinks categories={categories} />
         </ul>
       </Container>
     </nav>
