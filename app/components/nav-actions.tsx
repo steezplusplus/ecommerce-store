@@ -1,11 +1,21 @@
 'use client';
 
+import { useState, useEffect } from "react";
 import { ShoppingBag } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
-
 export function NavActions() {
+  const [isMounted, setIsMounted] = useState<boolean>(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null; // Prevent server from generating html
+  }
+
   return (
     <>
       <li className="ml-auto pr-4">
