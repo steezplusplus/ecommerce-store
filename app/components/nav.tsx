@@ -1,30 +1,13 @@
 import Link from 'next/link';
 
+import { getCategories } from '@/actions/get-categories';
 import { Container } from '@/components/ui/container';
 import { NavLinks } from './nav-links';
 
-const categories = [
-  {
-    name: 'Link 1',
-    id: 'link-1',
-    billboard: {
-      id: 'billboard-1',
-      name: 'Billboard 1',
-      imageUrl: 'www.fakeurl.com',
-    },
-  },
-  {
-    name: 'Link 2',
-    id: 'link-2',
-    billboard: {
-      id: 'billboard-2',
-      name: 'Billboard 2',
-      imageUrl: 'www.fakeurl.com',
-    },
-  },
-];
+export const revalidate = 0; // Never cache
 
-export function Nav() {
+export async function Nav() {
+  const categories = await getCategories();
   return (
     <nav className='border-b'>
       <Container>
