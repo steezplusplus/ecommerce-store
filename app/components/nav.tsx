@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { getCategories } from '@/actions/get-categories';
 import { Container } from '@/components/ui/container';
 import { NavLinks } from './nav-links';
+import { NavActions } from './nav-actions';
 
 export const revalidate = 0; // Never cache
 
@@ -18,6 +19,7 @@ export async function Nav() {
             </Link>
           </li>
           <NavLinks categories={categories} />
+          <NavActions />
         </ul>
       </Container>
     </nav>
