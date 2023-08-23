@@ -23,7 +23,7 @@ export async function getProducts(query: ProductsQuery): Promise<Product[]> {
     },
   });
 
-  const res = await fetch(URL);
+  const res = await fetch(url);
 
   if (!res.ok) {
     throw new Error(`[GET_PRODUCTS]: ${res.statusText}`);
