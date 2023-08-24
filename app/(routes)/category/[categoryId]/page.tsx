@@ -4,9 +4,10 @@ import { getColors } from "@/actions/get-colors";
 import { getCategory } from "@/actions/get-category";
 import { Container } from "@/components/ui/container";
 import { NoResults } from "@/components/ui/no-results";
-import { Billboard } from "../../components/billboard";
-import { Filter } from "./components/filter";
 import { ProductCard } from "@/components/ui/product-card";
+import { Filter } from "./components/filter";
+import { MobileFilter } from "./components/mobile-filter";
+import { Billboard } from "../../components/billboard";
 
 export const revalidate = 0;
 
@@ -41,6 +42,7 @@ export default async function CategoryPage(props: CategoryPageProps) {
         <Billboard data={category.billboard} />
         <div className="px-4 sm:px-6 lg:px-8 pb-24">
           <div className="lg:grid lg:grid-cols-5 lg:gap-x-8">
+            <MobileFilter sizes={sizes} colors={colors} />
             <div className="hidden lg:block">
               <Filter
                 valueKey="sizeId"
