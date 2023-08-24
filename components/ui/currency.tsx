@@ -6,8 +6,15 @@ type CurrencyProps = {
   value?: string | number;
 };
 
+function priceFormatter() {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  });
+}
+
 export function Currency(props: CurrencyProps) {
-  const { value } = props;
+  const { value = 0 } = props;
   const [isMounted, setIsMounted] = useState<boolean>(false);
 
   useEffect(() => {
@@ -19,15 +26,9 @@ export function Currency(props: CurrencyProps) {
   }
 
   return (
-    <div className="font-semibold">
+    <p className="font-semibold">
       {priceFormatter().format(Number(value))}
-    </div>
+    </p>
   );
 }
 
-function priceFormatter() {
-  return new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-  });
-}
