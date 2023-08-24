@@ -1,6 +1,6 @@
 import { Container } from "@/components/ui/container";
 import { ProductList } from "@/components/ui/product-list";
-import { Gallery } from "@/components/gallery";
+import { Gallery } from "@/components/ui/gallery";
 import { getProducts } from "@/actions/get-products";
 import { getProduct } from "@/actions/get-product";
 
@@ -25,7 +25,6 @@ export default async function ProductPage(props: ProductPageProps) {
         <div className="px-4 py-10 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
             <Gallery images={product.images} />
-            <p>Gallery</p>
             <div className="mt-10 px-4 sm:mt-16 sm:px-0 lg:mt-0">
               {/* <Info data={product} /> */}
               <p>Info</p>
