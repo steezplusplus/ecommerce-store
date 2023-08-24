@@ -4,6 +4,7 @@ type BillboardProps = {
   data: BillboardType;
 };
 
+// TODO Move to components/ui
 export function Billboard(props: BillboardProps) {
   const { data } = props;
   return (
