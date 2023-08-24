@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils"
+import { cn } from '@/lib/utils';
 
 type IconButtonProps = {
   icon: React.ReactElement;
@@ -14,13 +14,13 @@ export function IconButton(props: IconButtonProps) {
       className={cn(
         `
           flex items-center justify-center
-          border rounded-full bg-white shadow-md p-2
-          hover:scale-110 transition
-        `, className
+          rounded-full border bg-white p-2 shadow-md
+          transition hover:scale-110
+        `,
+        className
       )}
-
     >
       {icon}
     </button>
-  )
+  );
 }

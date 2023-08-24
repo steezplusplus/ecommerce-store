@@ -29,11 +29,11 @@ export type Image = {
 export type Size = {
   id: string;
   name: string;
-  value: string
+  value: string;
 };
 
 export type Color = {
   id: string;
   name: string;
-  value: string
+  value: string;
 };

@@ -22,9 +22,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={font.className}>
         <Nav />
-        <main>
-          {children}
-        </main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

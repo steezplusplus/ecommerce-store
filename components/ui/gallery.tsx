@@ -24,7 +24,7 @@ export function Gallery(props: GalleryProps) {
       <Tab.Panels className='aspect-square w-full'>
         {images.map((image) => (
           <Tab.Panel key={image.id}>
-            <div className='aspect-square relative h-full w-full sm:rounded-lg overflow-hidden'>
+            <div className='relative aspect-square h-full w-full overflow-hidden sm:rounded-lg'>
               <NextImage
                 fill
                 src={image.url}
@@ -49,7 +49,7 @@ function GalleryTab(props: GalleryTabProps) {
     <Tab className='relative flex aspect-square cursor-pointer items-center justify-center rounded-md bg-white'>
       {({ selected }) => (
         <div>
-          <span className='absolute h-full w-full aspect-square inset-0 overflow-hidden rounded-md'>
+          <span className='absolute inset-0 aspect-square h-full w-full overflow-hidden rounded-md'>
             <NextImage
               fill
               src={image.url}
@@ -60,7 +60,7 @@ function GalleryTab(props: GalleryTabProps) {
           <span
             className={cn(
               'absolute inset-0 rounded-md ring-2 ring-offset-2',
-              selected ? 'ring-black' : 'ring-transparent',
+              selected ? 'ring-black' : 'ring-transparent'
             )}
           />
         </div>

@@ -26,9 +26,6 @@ export function Currency(props: CurrencyProps) {
   }
 
   return (
-    <p className="font-semibold">
-      {priceFormatter().format(Number(value))}
-    </p>
+    <p className='font-semibold'>{priceFormatter().format(Number(value))}</p>
   );
 }
-
