@@ -4,9 +4,11 @@ import { Urbanist } from 'next/font/google';
 
 import { Footer } from './components/footer';
 import { Nav } from './components/nav';
+import { ModalProvider } from '@/providers/modal-provider';
 
 const font = Urbanist({ subsets: ['latin'] });
 
+// TODO Metadata for each page
 export const metadata: Metadata = {
   title: 'Store',
   description: 'Store',
@@ -21,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={font.className}>
+        <ModalProvider />
         <Nav />
         <main>{children}</main>
         <Footer />
