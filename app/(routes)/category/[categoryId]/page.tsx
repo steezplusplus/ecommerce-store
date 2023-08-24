@@ -3,8 +3,9 @@ import { getSizes } from "@/actions/get-sizes";
 import { getColors } from "@/actions/get-colors";
 import { getCategory } from "@/actions/get-category";
 import { Container } from "@/components/ui/container";
+import { NoResults } from "@/components/ui/no-results";
 import { Billboard } from "../../components/billboard";
-
+import { Filter } from "./components/filter";
 
 export const revalidate = 0;
 
@@ -34,30 +35,29 @@ export default async function CategoryPage(props: CategoryPageProps) {
   const category = await getCategory(categoryId)
 
   return (
-    <>
-      <div className='bg-white'>
-        <Container>
-          <Billboard data={category.billboard} />
-        </Container>
+    <div>
+      <Container>
+        <Billboard data={category.billboard} />
+      </Container>
+      <div className="px-4 sm:px-6 lg:px-8 pb-24">
+        <div className="lg:frid lg:grid-cols-5 lg:gap-x-8">
+          <div className="hidden lg:block">
+            <Filter
+              valueKey="sizeId"
+              name="Sizes"
+              data={sizes}
+            />
+            <Filter
+              valueKey="colorId"
+              name="Colors"
+              data={colors}
+            />
+          </div>
+          <div className="mt-6 lg:col-span-4 lg:mt-0">
+            {products.length === 0 && <NoResults />}
+          </div>
+        </div>
       </div>
-      <div>
-        <p>Products:</p>
-        {products.map((product) => (
-          <p key={product.id}>{product.name}</p>
-        ))}
-        <br />
-        <p>Sizes:</p>
-        {sizes.map((size) => (
-          <p key={size.id}>{size.name}</p>
-        ))}
-        <br />
-        <p>Colors:</p>
-        {colors.map((color) => (
-          <p key={color.id}>{color.name}</p>
-        ))}
-        <br />
-        <p>Category {category.name}</p>
-      </div>
-    </>
+    </div>
   );
 }
