@@ -2,6 +2,7 @@
 
 import { ShoppingCart } from 'lucide-react';
 
+import { useCart } from '@/hooks/use-cart';
 import { Currency } from '@/components/ui/currency';
 import { Button } from '@/components/ui/button';
 import { Product } from '@/types';
@@ -12,9 +13,11 @@ type InfoProps = {
 
 export function Info(props: InfoProps) {
   const { data } = props;
+  const cart = useCart();
 
-  const onAddToCart = () => {
-    // TODO
+  const onAdd = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation();
+    cart.addItem(data);
   };
 
   return (
@@ -41,7 +44,7 @@ export function Info(props: InfoProps) {
       </div>
       <div className='mt-10 flex items-center gap-x-3'>
         <Button
-          onClick={onAddToCart}
+          onClick={onAdd}
           className='flex items-center gap-x-2 text-white'
         >
           Add To Cart
