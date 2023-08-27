@@ -1,34 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# E-Commerce Frontend
 
-## Getting Started
+* A dynamic and engaging online shopping experience created powered by [E-commerce Admin](https://github.com/steezplusplus/ecommerce-admin).
 
-First, run the development server:
+## Built with
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+* [E-commerce Admin](https://github.com/steezplusplus/ecommerce-admin)
+* [NextJS 13](https://nextjs.org/) (app/ router)
+* [Tailwind](https://tailwindcss.com/)
+* [Prisma](https://www.prisma.io/)
+* [Vercel](https://vercel.com/)
+* [Supabase](https://supabase.com/)
+* [Cloudinary](https://cloudinary.com/)
+* [Clerk](https://clerk.com/)
+
+## Features
+
+* Search through a stores categories and products
+* Filter items by their attributes, such as size and color
+* Add items to your cart
+
+## Setup
+
+1. If not already done, set up [E-commerce Admin](https://github.com/steezplusplus/ecommerce-admin).
+
+2. Clone this project
+
+3. Install Dependencies
+
+```shell
+npm i
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Get `NEXT_PUBLIC_API_URL` from [E-commerce Admin](https://github.com/steezplusplus/). Place it in `.env`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```shell
+NEXT_PUBLIC_API_URL=
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+5. If not already running, start the Admin: [E-commerce Admin](https://github.com/steezplusplus/)
 
-## Learn More
+```shell
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+6. Start the frontend (this project)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```shell
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Available commands
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+| command         | description                              |
+| :-------------- | :--------------------------------------- |
+| `dev`           | Starts a development instance of the app |
