@@ -8,7 +8,6 @@ import { Currency } from '@/components/ui/currency';
 
 export function Summary() {
   const items = useCart((cart) => cart.items);
-  const removeAll = useCart((cart) => cart.removeAll);
 
   const totalPrice = items.reduce((sum, item) => {
     return sum += Number(item.price);
