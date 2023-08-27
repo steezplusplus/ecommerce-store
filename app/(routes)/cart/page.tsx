@@ -1,12 +1,15 @@
-"use client";
+'use client';
 
 import { useEffect, useState } from 'react';
 
-import { Container } from '@/components/ui/container';
 import { useCart } from '@/hooks/use-cart';
+import { Container } from '@/components/ui/container';
+import { CartItem } from './components/cart-item';
+import { Summary } from './components/summary';
 
 export const revalidate = 0;
 
+// TODO Do not return the  empty <ul> when cart empty
 export default function CartPage() {
   const [isMounted, setIsMounted] = useState(false);
   const cart = useCart();
@@ -29,14 +32,14 @@ export default function CartPage() {
               {cart.items.length === 0 && <p className="text-neutral-500">No items added to cart.</p>}
               <ul>
                 {cart.items.map((item) => (
-                  // <CartItem key={item.id} data={item} />
-                  <p key={item.id}>{item.name}</p>
+                  <CartItem key={item.id} data={item} />
                 ))}
               </ul>
             </div>
+            <Summary />
           </div>
         </div>
       </Container>
     </div>
-  )
+  );
 };
