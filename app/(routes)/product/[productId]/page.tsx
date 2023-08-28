@@ -1,3 +1,5 @@
+import type { Metadata, ResolvingMetadata } from 'next';
+
 import { Container } from '@/components/ui/container';
 import { ProductList } from '@/components/ui/product-list';
 import { Gallery } from '@/components/ui/gallery';
@@ -12,6 +14,14 @@ type ProductPageProps = {
 };
 
 export const revalidate = 0;
+
+export async function generateMetadata(props: ProductPageProps, parent: ResolvingMetadata): Promise<Metadata> {
+  const { params } = props;
+  const product = await getProduct(params.productId);
+  return {
+    title: `${product.name} | Store`,
+  };
+}
 
 export default async function ProductPage(props: ProductPageProps) {
   const { params } = props;
