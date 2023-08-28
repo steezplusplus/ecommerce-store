@@ -9,7 +9,7 @@ export const revalidate = 0;
 
 export default async function HomePage() {
   const products = await getProducts({ isFeatured: true });
-  const billboard = await getBillboard('4e00e51c-4dbf-4430-b20d-f9e171cef23d');
+  const billboard = await getBillboard('3622c3a7-e75b-4e84-a3bd-9107e76e4430'); // TODO pull primary billboard id out to env var?
   return (
     <Container>
       <div className='space-y-10 pb-10'>
