@@ -1,3 +1,5 @@
+import type { Metadata, ResolvingMetadata } from 'next';
+
 import { getProducts } from "@/actions/get-products";
 import { getSizes } from "@/actions/get-sizes";
 import { getColors } from "@/actions/get-colors";
@@ -20,6 +22,14 @@ type CategoryPageProps = {
     sizeId: string;
   };
 };
+
+export async function generateMetadata(props: CategoryPageProps, parent: ResolvingMetadata): Promise<Metadata> {
+  const { params } = props;
+  const category = await getCategory(params.categoryId);
+  return {
+    title: `${category.name} | Store`,
+  };
+}
 
 export default async function CategoryPage(props: CategoryPageProps) {
   const { params, searchParams } = props;
