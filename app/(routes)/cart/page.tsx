@@ -1,5 +1,6 @@
 'use client';
 
+import type { Metadata } from 'next';
 import { useEffect, useState } from 'react';
 
 import { useCart } from '@/hooks/use-cart';
@@ -8,6 +9,10 @@ import { CartItem } from './components/cart-item';
 import { Summary } from './components/summary';
 
 export const revalidate = 0;
+
+export const metadata: Metadata = {
+  title: 'Cart | Store',
+};
 
 // TODO Do not return the  empty <ul> when cart empty
 export default function CartPage() {
