@@ -14,6 +14,7 @@ type MobileFilterProps = {
 };
 
 // TODO Replace Button and Dialog with button and dialog
+// TODO Add price filter
 export function MobileFilter(props: MobileFilterProps) {
   const { colors } = props;
   const [isOpen, setIsOpen] = useState<boolean>(false);
