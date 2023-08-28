@@ -7,6 +7,7 @@ import { NavActions } from './nav-actions';
 
 export const revalidate = 0; // Never cache
 
+// TODO Mobile layout collapse
 export async function Nav() {
   const categories = await getCategories();
   return (

@@ -1,5 +1,6 @@
 import { Container } from '@/components/ui/container';
 
+// TODO Mobile layout collapse
 export function Footer() {
   return (
     <footer className='border-t'>
