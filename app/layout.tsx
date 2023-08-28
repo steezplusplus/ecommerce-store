@@ -9,10 +9,8 @@ import { ToastProvider } from '@/providers/toast-provider';
 
 const font = Urbanist({ subsets: ['latin'] });
 
-// TODO Metadata for each page
 export const metadata: Metadata = {
-  title: 'Store',
-  description: 'Store',
+  title: 'T-Shirts, Flannels & Dress Shirts | Store',
 };
 
 // TODO <main />
