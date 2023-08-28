@@ -14,16 +14,14 @@ export const metadata: Metadata = {
 export default function CartPage() {
 
   return (
-    <div className="bg-white">
-      <Container>
-        <div className="px-4 py-16 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-black">Shopping Cart</h1>
-          <div className="mt-12 lg:grid lg:grid-cols-12 lg:items-start gap-x-12">
-            <CartList />
-            <Summary />
-          </div>
+    <Container>
+      <div className="py-16 px-4 sm:px-6 lg:px-8">
+        <h2 className="mb-12 text-3xl font-bold">Shopping Cart</h2>
+        <div className="lg:grid lg:grid-cols-12 lg:items-start gap-x-12">
+          <CartList />
+          <Summary />
         </div>
-      </Container>
-    </div>
+      </div>
+    </Container>
   );
 };
