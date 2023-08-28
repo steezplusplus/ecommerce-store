@@ -4,19 +4,18 @@ import { useState } from 'react';
 import { Plus, X } from 'lucide-react';
 import { Dialog } from '@headlessui/react';
 
-import { Color, Size } from '@/types';
+import { Color } from '@/types';
 import { Button } from '@/components/ui/button';
 import { IconButton } from '@/components/ui/icon-button';
 import { Filter } from './filter';
 
 type MobileFilterProps = {
-  sizes: Size[];
   colors: Color[];
 };
 
 // TODO Replace Button and Dialog with button and dialog
 export function MobileFilter(props: MobileFilterProps) {
-  const { sizes, colors } = props;
+  const { colors } = props;
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
@@ -39,11 +38,6 @@ export function MobileFilter(props: MobileFilterProps) {
               <IconButton icon={<X />} onClick={() => setIsOpen(false)} />
             </div>
             <div className='p-4'>
-              <Filter
-                valueKey="sizeId"
-                name="Sizes"
-                data={sizes}
-              />
               <Filter
                 valueKey="colorId"
                 name="Colors"

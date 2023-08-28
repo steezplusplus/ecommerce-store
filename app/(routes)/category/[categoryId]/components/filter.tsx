@@ -5,11 +5,11 @@ import { useSearchParams } from 'next/navigation';
 import { useRouter } from 'next/navigation';
 
 import { cn } from '@/lib/utils';
-import { Color, Size } from '@/types';
+import { Color } from '@/types';
 import { Button } from '@/components/ui/button';
 
 type FilterProps = {
-  data: (Color | Size)[];
+  data: Color[];
   valueKey: string;
   name: string;
 };

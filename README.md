@@ -16,7 +16,7 @@
 ## Features
 
 * Search through a stores categories and products
-* Filter items by their attributes, such as size and color
+* Filter items by their attributes
 * Add items to your cart
 
 ## Setup

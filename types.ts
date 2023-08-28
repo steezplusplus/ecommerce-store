@@ -16,7 +16,6 @@ export type Product = {
   name: string;
   price: string;
   isFeatured: boolean;
-  size: Size;
   color: Color;
   images: Image[];
 };
@@ -24,12 +23,6 @@ export type Product = {
 export type Image = {
   id: string;
   url: string;
-};
-
-export type Size = {
-  id: string;
-  name: string;
-  value: string;
 };
 
 export type Color = {

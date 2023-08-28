@@ -8,7 +8,6 @@ const URL = `${API_URL}/products`;
 type ProductsQuery = {
   categoryId?: string;
   colorId?: string;
-  sizeId?: string;
   isFeatured?: boolean;
 };
 
@@ -18,7 +17,6 @@ export async function getProducts(query: ProductsQuery): Promise<Product[]> {
     query: {
       categoryId: query.categoryId,
       colorId: query.colorId,
-      sizeId: query.sizeId,
       isFeatured: query.isFeatured,
     },
   });

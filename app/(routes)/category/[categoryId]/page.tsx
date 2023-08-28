@@ -1,7 +1,6 @@
 import type { Metadata, ResolvingMetadata } from 'next';
 
 import { getProducts } from "@/actions/get-products";
-import { getSizes } from "@/actions/get-sizes";
 import { getColors } from "@/actions/get-colors";
 import { getCategory } from "@/actions/get-category";
 import { Container } from "@/components/ui/container";
@@ -19,7 +18,6 @@ type CategoryPageProps = {
   };
   searchParams: {
     colorId: string;
-    sizeId: string;
   };
 };
 
@@ -34,15 +32,13 @@ export async function generateMetadata(props: CategoryPageProps, parent: Resolvi
 export default async function CategoryPage(props: CategoryPageProps) {
   const { params, searchParams } = props;
   const { categoryId } = params;
-  const { colorId, sizeId } = searchParams;
+  const { colorId } = searchParams;
 
   const products = await getProducts({
     categoryId,
     colorId,
-    sizeId,
   });
 
-  const sizes = await getSizes();
   const colors = await getColors();
   const category = await getCategory(categoryId)
 
@@ -52,13 +48,8 @@ export default async function CategoryPage(props: CategoryPageProps) {
         <Billboard data={category.billboard} />
         <div className="px-4 sm:px-6 lg:px-8 pb-24">
           <div className="lg:grid lg:grid-cols-5 lg:gap-x-8">
-            <MobileFilter sizes={sizes} colors={colors} />
+            <MobileFilter colors={colors} />
             <div className="hidden lg:block">
-              <Filter
-                valueKey="sizeId"
-                name="Sizes"
-                data={sizes}
-              />
               <Filter
                 valueKey="colorId"
                 name="Colors"
