@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 
-import { Billboard } from './components/billboard';
+import { Billboard } from '@/components/billboard';
 import { ProductList } from '@/components/product-list';
 import { getBillboard } from '@/actions/get-billboard';
 import { getProducts } from '@/actions/get-products';

@@ -5,9 +5,9 @@ import { getColors } from '@/actions/get-colors';
 import { getCategory } from '@/actions/get-category';
 import { NoResults } from '@/components/no-results';
 import { ProductCard } from '@/components/product-card';
+import { Billboard } from '@/components/billboard';
 import { Filter } from './components/filter';
 import { MobileFilter } from './components/mobile-filter';
-import { Billboard } from '../../components/billboard';
 
 export const revalidate = 0;
 
