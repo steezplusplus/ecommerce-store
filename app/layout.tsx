@@ -3,8 +3,8 @@ import { Urbanist } from 'next/font/google';
 
 import { ModalProvider } from '@/providers/modal-provider';
 import { ToastProvider } from '@/providers/toast-provider';
-import { Nav } from './components/nav';
-import { Footer } from './components/footer';
+import { Nav } from './_components/nav';
+import { Footer } from './_components/footer';
 import './globals.css';
 
 const font = Urbanist({ subsets: ['latin'] });
