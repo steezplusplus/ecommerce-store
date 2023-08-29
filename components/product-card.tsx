@@ -41,6 +41,7 @@ export function ProductCard(props: ProductCardProps) {
           className='aspect-square rounded-md object-cover'
           src={data?.images?.[0]?.url}
           fill
+          sizes='(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw'
           alt={`Image of ${data.name}`}
         />
         <div className='absolute bottom-5 w-full px-6 opacity-0 transition group-hover:opacity-100 '>
