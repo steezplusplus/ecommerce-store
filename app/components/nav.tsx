@@ -11,10 +11,10 @@ export async function Nav() {
   const categories = await getCategories();
   return (
     <nav className='border-b'>
-      <ul className='flex items-center gap-x-2 px-4 py-2 sm:gap-x-4 sm:px-6 lg:gap-x-6 lg:px-8'>
-        <li>
+      <ul className='flex h-full items-center gap-x-2 px-4 sm:gap-x-4 sm:px-6 lg:gap-x-6 lg:px-8'>
+        <li className='mr-2'>
           <Link href='/'>
-            <h1 className='text-xl font-bold'>STORE</h1>
+            <h1 className='text-2xl font-bold'>STORE</h1>
           </Link>
         </li>
         <NavLinks categories={categories} />
