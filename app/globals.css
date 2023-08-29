@@ -23,5 +23,5 @@ body {
   grid-template:
     'navbar' 3.5rem
     'main' 1fr
-    'footer' 2.5rem;
+    'footer' 3rem;
 }

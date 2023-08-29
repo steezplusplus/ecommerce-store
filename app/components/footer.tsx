@@ -2,9 +2,9 @@
 export function Footer() {
   return (
     <footer className='border-t'>
-      <ul className='flex items-center gap-x-2 px-4 py-2 sm:gap-x-4 sm:px-6 lg:gap-x-6 lg:px-8'>
+      <ul className='flex h-full flex-col items-center px-4 lg:flex-row lg:px-8'>
         <li>&copy; Jesse Breuer-Penello. All rights reserverd.</li>
-        <li className='ml-auto'>
+        <li className='lg:ml-auto'>
           <a
             href='https://github.com/steezplusplus/ecommerce-store'
             target='_blank'
