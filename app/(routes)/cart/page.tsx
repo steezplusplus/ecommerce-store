@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
-import { Summary } from './components/summary';
-import { CartList } from './components/cart-list';
+import { Summary } from './_components/summary';
+import { CartList } from './_components/cart-list';
 
 export const revalidate = 0;
 
