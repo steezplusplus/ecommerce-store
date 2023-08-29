@@ -4,7 +4,6 @@ import qs from 'query-string';
 import { useSearchParams } from 'next/navigation';
 import { useRouter } from 'next/navigation';
 
-import { cn } from '@/lib/utils';
 import { Color } from '@/types';
 import { Button } from '@/components/ui/button';
 
@@ -14,52 +13,50 @@ type FilterProps = {
   name: string;
 };
 
-// TODO Replace buttons with radios
+// TODO Why does changing the filter make the page hop?
 export function Filter(props: FilterProps) {
   const { valueKey, name, data } = props;
   const router = useRouter();
   const searchParams = useSearchParams();
   const selectedValue = searchParams.get(valueKey);
 
-  const handleClick = (id: string) => {
-    const current = qs.parse(searchParams.toString());
+  const onToggle = (filterId: string) => {
+    const currentParams = qs.parse(searchParams.toString());
 
-    const query = {
-      ...current,
-      [valueKey]: id,
+    const newParams = {
+      ...currentParams,
+      [valueKey]: filterId,
     };
 
-    if (current[valueKey] === id) {
-      query[valueKey] = null;
+    if (currentParams[valueKey] === filterId) {
+      newParams[valueKey] = null;
     }
 
     const url = qs.stringifyUrl({
       url: window.location.href,
-      query,
+      query: newParams,
     }, { skipNull: true });
 
     router.push(url);
   }
 
   return (
-    <div className='mb-8'>
-      <h3 className='text-lg font-semibold'>{name}</h3>
-      <hr className='my-8' />
+    <fieldset>
+      <legend className='text-lg font-semibold'>{name}</legend>
       <div className='flex flex-wrap gap-2'>
         {data.map((filter) => (
           <div key={filter.id} className='flex items-center'>
             <Button
-              onClick={() => handleClick(filter.id)}
-              className={cn(
-                'rounded-md text-sm text-gray-8-- p-2 bg-white border border-gray-300',
-                selectedValue === filter.id && 'bg-black text-white'
-              )}
+              aria-pressed={selectedValue === filter.id}
+              onClick={() => onToggle(filter.id)}
+              style={{ backgroundColor: filter.value, color: filter.value === '#FFFFFF' ? 'black' : 'white' }}
+              className='rounded-md text-sm p-2 border border-gray-300 aria-pressed:text-xl aria-pressed:transition'
             >
               {filter.name}
             </Button>
           </div>
         ))}
       </div>
-    </div>
+    </fieldset >
   );
 }
