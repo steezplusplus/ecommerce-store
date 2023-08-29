@@ -1,9 +1,10 @@
-// TODO Mobile layout collapse
 export function Footer() {
   return (
     <footer className='border-t'>
       <ul className='flex h-full flex-col items-center px-4 lg:flex-row lg:px-8'>
-        <li>&copy; Jesse Breuer-Penello. All rights reserverd.</li>
+        <li className='mt-1 lg:m-0'>
+          &copy; Jesse Breuer-Penello. All rights reserverd.
+        </li>
         <li className='lg:ml-auto'>
           <a
             href='https://github.com/steezplusplus/ecommerce-store'
