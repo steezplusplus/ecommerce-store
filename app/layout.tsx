@@ -10,10 +10,9 @@ import { ToastProvider } from '@/providers/toast-provider';
 const font = Urbanist({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'T-Shirts, Flannels & Dress Shirts | Store',
+  title: 'Store',
 };
 
-// TODO <main />
 export default function RootLayout({
   children,
 }: {

@@ -1,3 +1,5 @@
+import { Metadata } from 'next';
+
 import { Billboard } from './components/billboard';
 import { Container } from '@/components/container';
 import { ProductList } from '@/components/product-list';
@@ -5,6 +7,10 @@ import { getBillboard } from '@/actions/get-billboard';
 import { getProducts } from '@/actions/get-products';
 
 export const revalidate = 0;
+
+export const metadata: Metadata = {
+  title: 'Featured Products | Store',
+};
 
 export default async function HomePage() {
   const products = await getProducts({ isFeatured: true });
