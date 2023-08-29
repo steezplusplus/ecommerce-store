@@ -2,8 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body,
-::root {
-  @apply h-full;
+:root {
+  font-size: 1rem;
+}
+
+body > nav {
+  grid-area: navbar;
+}
+
+body > main {
+  grid-area: main;
+}
+
+body > footer {
+  grid-area: footer;
+}
+
+body {
+  @apply h-screen grid;
+  grid-template:
+    'navbar' 3.5rem
+    'main'   1fr
+    'footer' 2.5rem;
 }
