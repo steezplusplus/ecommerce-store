@@ -3,7 +3,7 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { X } from 'lucide-react';
 import { Fragment } from 'react';
-import { IconButton } from '@/components/ui/icon-button';
+import { IconButton } from '@/components/icon-button';
 
 type ModalProps = {
   open: boolean;

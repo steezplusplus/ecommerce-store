@@ -3,8 +3,8 @@
 import { ShoppingCart } from 'lucide-react';
 
 import { useCart } from '@/hooks/use-cart';
-import { Currency } from '@/components/ui/currency';
-import { Button } from '@/components/ui/button';
+import { Currency } from '@/components/currency';
+import { Button } from '@/components/button';
 import { Product } from '@/types';
 
 type InfoProps = {

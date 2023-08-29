@@ -5,7 +5,7 @@ import { useSearchParams } from 'next/navigation';
 import { useRouter } from 'next/navigation';
 
 import { Color } from '@/types';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/button';
 
 type FilterProps = {
   data: Color[];

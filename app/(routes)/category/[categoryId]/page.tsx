@@ -1,14 +1,14 @@
 import type { Metadata, ResolvingMetadata } from 'next';
 
-import { getProducts } from "@/actions/get-products";
-import { getColors } from "@/actions/get-colors";
-import { getCategory } from "@/actions/get-category";
-import { Container } from "@/components/ui/container";
-import { NoResults } from "@/components/ui/no-results";
-import { ProductCard } from "@/components/ui/product-card";
-import { Filter } from "./components/filter";
-import { MobileFilter } from "./components/mobile-filter";
-import { Billboard } from "../../components/billboard";
+import { getProducts } from '@/actions/get-products';
+import { getColors } from '@/actions/get-colors';
+import { getCategory } from '@/actions/get-category';
+import { Container } from '@/components/container';
+import { NoResults } from '@/components/no-results';
+import { ProductCard } from '@/components/product-card';
+import { Filter } from './components/filter';
+import { MobileFilter } from './components/mobile-filter';
+import { Billboard } from '../../components/billboard';
 
 export const revalidate = 0;
 
@@ -43,31 +43,28 @@ export default async function CategoryPage(props: CategoryPageProps) {
   const category = await getCategory(categoryId)
 
   return (
-    <div>
-      <Container>
-        <Billboard data={category.billboard} />
-        <div className="px-4 sm:px-6 lg:px-8 pb-24">
-          <div className="lg:grid lg:grid-cols-5 lg:gap-x-8">
-            <MobileFilter colors={colors} />
-            <div className="hidden lg:block">
-              <Filter
-                valueKey="colorId"
-                name="Colors"
-                data={colors}
-              />
-            </div>
-            <div className="mt-6 lg:col-span-4 lg:mt-0">
-              {products.length === 0 && <NoResults />}
-              <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
-                {products.map((product) => (
-                  <ProductCard key={product.id} data={product} />
-                ))}
-              </div>
+    <Container>
+      <Billboard data={category.billboard} />
+      <div className='px-4 sm:px-6 lg:px-8 pb-24'>
+        <div className='lg:grid lg:grid-cols-5 lg:gap-x-8'>
+          <MobileFilter colors={colors} />
+          <div className='hidden lg:block'>
+            <Filter
+              valueKey='colorId'
+              name='Colors'
+              data={colors}
+            />
+          </div>
+          <div className='mt-6 lg:col-span-4 lg:mt-0'>
+            {products.length === 0 && <NoResults />}
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
+              {products.map((product) => (
+                <ProductCard key={product.id} data={product} />
+              ))}
             </div>
           </div>
         </div>
-      </Container>
-
-    </div>
+      </div>
+    </Container>
   );
 }

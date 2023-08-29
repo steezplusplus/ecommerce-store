@@ -1,9 +1,9 @@
 import type { Metadata, ResolvingMetadata } from 'next';
 
-import { Container } from '@/components/ui/container';
-import { ProductList } from '@/components/ui/product-list';
-import { Gallery } from '@/components/ui/gallery';
-import { Info } from '@/components/ui/info';
+import { Container } from '@/components/container';
+import { ProductList } from '@/components/product-list';
+import { Gallery } from '@/components/gallery';
+import { Info } from '@/components/info';
 import { getProducts } from '@/actions/get-products';
 import { getProduct } from '@/actions/get-product';
 
@@ -28,6 +28,7 @@ export default async function ProductPage(props: ProductPageProps) {
 
   const product = await getProduct(params.productId);
 
+  // TODO Bug: Sometimes suggests the product the user is already viewing.
   const suggestedProducts = await getProducts({
     categoryId: product?.category?.id,
   });

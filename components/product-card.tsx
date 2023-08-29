@@ -7,8 +7,8 @@ import { Expand, ShoppingCart } from 'lucide-react';
 import { Product } from '@/types';
 import { usePreviewModal } from '@/hooks/use-preview-modal';
 import { useCart } from '@/hooks/use-cart';
-import { IconButton } from '@/components/ui/icon-button';
-import { Currency } from '@/components/ui/currency';
+import { IconButton } from '@/components/icon-button';
+import { Currency } from '@/components/currency';
 
 type ProductCardProps = {
   data: Product;

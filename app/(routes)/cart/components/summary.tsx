@@ -3,8 +3,8 @@
 import { toast } from 'react-hot-toast';
 
 import { useCart } from '@/hooks/use-cart';
-import { Button } from '@/components/ui/button';
-import { Currency } from '@/components/ui/currency';
+import { Button } from '@/components/button';
+import { Currency } from '@/components/currency';
 
 export function Summary() {
   const items = useCart((cart) => cart.items);
