@@ -1,0 +1,25 @@
+import { LoadingSkeleton } from '@/components/loading-skeleton';
+
+const Loading = () => {
+  return (
+    <div className='flex flex-col gap-y-10 pb-10'>
+      {/* Billboard */}
+      <div className='rounded-xl p-4 sm:p-6 lg:p-8'>
+        <LoadingSkeleton className='aspect-square w-full rounded-xl md:aspect-[2.4/1]' />
+      </div>
+      {/* Product List */}
+      <div className='px-4 sm:px-6 lg:px-8'>
+        <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
+          <LoadingSkeleton className='aspect-square rounded-xl' />
+          <LoadingSkeleton className='aspect-square rounded-xl' />
+          <LoadingSkeleton className='aspect-square rounded-xl' />
+          <LoadingSkeleton className='aspect-square rounded-xl' />
+          <LoadingSkeleton className='aspect-square rounded-xl' />
+          <LoadingSkeleton className='aspect-square rounded-xl' />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Loading;
