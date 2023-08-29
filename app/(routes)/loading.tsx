@@ -9,7 +9,6 @@ export default function Loading() {
       </div>
       {/* Product List */}
       <div className='px-4 sm:px-6 lg:px-8'>
-        <h3 className='text-3xl font-bold'>Featured Products</h3>
         <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
           <LoadingSkeleton className='aspect-square rounded-xl' />
           <LoadingSkeleton className='aspect-square rounded-xl' />
