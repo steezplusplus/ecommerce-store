@@ -26,7 +26,9 @@ export function NavLinks(props: NavLinksProps) {
   const routes: Routes = categories.map((category) => ({
     label: category.name,
     href: `/category/${category.id}`,
-    ariaCurrent: pathName.startsWith(`/category/${category.id}`) ? 'page' : undefined,
+    ariaCurrent: pathName.startsWith(`/category/${category.id}`)
+      ? 'page'
+      : undefined,
   }));
 
   return (
