@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { Expand, ShoppingCart } from 'lucide-react';
 
 import { Product } from '@/types';
@@ -14,32 +14,26 @@ type ProductCardProps = {
   data: Product;
 };
 
-// TODO Image alt text
-// TODO Link for navigation not div with onClick
+// TODO Replace IconButton?
 export function ProductCard(props: ProductCardProps) {
   const { data } = props;
-  const router = useRouter();
   const previewModal = usePreviewModal();
   const cart = useCart();
 
-  const handleClick = () => {
-    router.push(`/product/${data.id}`);
-  };
-
   const onPreview = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.stopPropagation();
+    e.preventDefault();
     previewModal.onOpen(data);
   };
 
   const onAdd = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.stopPropagation();
+    e.preventDefault();
     cart.addItem(data);
   };
 
   return (
-    <div
-      onClick={handleClick}
-      className='group cursor-pointer space-y-4 rounded-xl border bg-white p-3'
+    <Link
+      href={`/product/${data.id}`}
+      className='group space-y-4 rounded-xl border bg-white p-3'
     >
       {/* Images and Actions */}
       <div className='rounded-cl relative aspect-square bg-gray-100'>
@@ -47,22 +41,22 @@ export function ProductCard(props: ProductCardProps) {
           className='aspect-square rounded-md object-cover'
           src={data?.images?.[0]?.url}
           fill
-          alt='image'
+          alt={`Image of ${data.name}`}
         />
         <div className='absolute bottom-5 w-full px-6 opacity-0 transition group-hover:opacity-100 '>
           <div className='flex justify-center gap-x-6'>
             <IconButton
               onClick={onPreview}
-              icon={<Expand size={20} className='text-gray-600 ' />}
+              icon={<Expand size={20} className='text-gray-600' />}
             />
             <IconButton
               onClick={onAdd}
-              icon={<ShoppingCart size={20} className='text-gray-600 ' />}
+              icon={<ShoppingCart size={20} className='text-gray-600' />}
             />
           </div>
         </div>
       </div>
-      {/* Images and Actions */}
+      {/* Info */}
       <div>
         <p className='text-lg font-semibold'>{data.name}</p>
         <p className='text-sm text-gray-500'>{data.category.name}</p>
@@ -71,6 +65,6 @@ export function ProductCard(props: ProductCardProps) {
       <div className='flex items-center justify-center'>
         <Currency value={data.price} />
       </div>
-    </div>
+    </Link>
   );
 }
