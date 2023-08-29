@@ -6,8 +6,8 @@ import { getCategory } from '@/actions/get-category';
 import { NoResults } from '@/components/no-results';
 import { ProductCard } from '@/components/product-card';
 import { Billboard } from '@/components/billboard';
-import { Filter } from './components/filter';
-import { MobileFilter } from './components/mobile-filter';
+import { Filter } from './_components/filter';
+import { MobileFilter } from './_components/mobile-filter';
 
 export const revalidate = 0;
 
