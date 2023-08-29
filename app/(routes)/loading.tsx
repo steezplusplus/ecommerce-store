@@ -1,8 +1,8 @@
 import { LoadingSkeleton } from '@/components/loading-skeleton';
 
-const Loading = () => {
+export default function Loading() {
   return (
-    <div className='flex flex-col gap-y-10 pb-10'>
+    <div className='flex flex-col'>
       {/* Billboard */}
       <div className='rounded-xl p-4 sm:p-6 lg:p-8'>
         <LoadingSkeleton className='aspect-square w-full rounded-xl md:aspect-[2.4/1]' />
@@ -21,6 +21,4 @@ const Loading = () => {
       </div>
     </div>
   );
-};
-
-export default Loading;
+}
