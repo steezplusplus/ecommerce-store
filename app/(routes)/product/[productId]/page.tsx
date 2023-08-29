@@ -31,6 +31,7 @@ export default async function ProductPage(props: ProductPageProps) {
   const product = await getProduct(params.productId);
 
   // TODO Bug: Sometimes suggests the product the user is already viewing.
+  // TODO Limit to 4 suggest products being shown
   const suggestedProducts = await getProducts({
     categoryId: product?.category?.id,
   });
