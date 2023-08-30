@@ -1,23 +1,23 @@
 # E-Commerce Frontend
 
-* A dynamic and engaging online shopping experience created powered by [E-commerce Admin](https://github.com/steezplusplus/ecommerce-admin).
+- A dynamic and engaging online shopping experience created powered by [E-commerce Admin](https://github.com/steezplusplus/ecommerce-admin).
 
 ## Built with
 
-* [E-commerce Admin](https://github.com/steezplusplus/ecommerce-admin)
-* [NextJS 13](https://nextjs.org/) (app/ router)
-* [Tailwind](https://tailwindcss.com/)
-* [Prisma](https://www.prisma.io/)
-* [Vercel](https://vercel.com/)
-* [Supabase](https://supabase.com/)
-* [Cloudinary](https://cloudinary.com/)
-* [Clerk](https://clerk.com/)
+- [E-commerce Admin](https://github.com/steezplusplus/ecommerce-admin)
+- [NextJS 13](https://nextjs.org/) (app/ router)
+- [Tailwind](https://tailwindcss.com/)
+- [Prisma](https://www.prisma.io/)
+- [Vercel](https://vercel.com/)
+- [Supabase](https://supabase.com/)
+- [Cloudinary](https://cloudinary.com/)
+- [Clerk](https://clerk.com/)
 
 ## Features
 
-* Search through a stores categories and products
-* Filter items by their attributes
-* Add items to your cart
+- Search through a stores categories and products
+- Filter items by their attributes
+- Add items to your cart
 
 ## Setup
 
@@ -51,6 +51,10 @@ npm run dev
 
 ## Available commands
 
-| command         | description                              |
-| :-------------- | :--------------------------------------- |
-| `dev`           | Starts a development instance of the app |
+| command | description                              |
+| :------ | :--------------------------------------- |
+| `dev`   | Starts a development instance of the app |
+
+### MIT License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE.md)
