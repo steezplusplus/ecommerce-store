@@ -13,7 +13,6 @@ type FilterProps = {
   name: string;
 };
 
-// TODO Why does changing the filter make the page hop?
 export function Filter(props: FilterProps) {
   const { valueKey, name, data } = props;
   const router = useRouter();
