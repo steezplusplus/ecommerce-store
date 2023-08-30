@@ -8,14 +8,14 @@ export function CartList() {
 
   if (cart.items.length === 0) {
     return (
-      <div className='lg:col-span-7 mb-16'>
+      <div className='mb-16 lg:col-span-7 lg:mb-0'>
         <p className='text-neutral-500'>No items added to cart.</p>
       </div>
     );
   }
 
   return (
-    <div className='lg:col-span-7 mb-16'>
+    <div className='mb-16 lg:col-span-7 lg:mb-0'>
       <ul>
         {cart.items.map((item) => (
           <CartItem key={item.id} data={item} />

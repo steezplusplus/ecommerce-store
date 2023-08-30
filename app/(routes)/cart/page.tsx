@@ -11,12 +11,12 @@ export const metadata: Metadata = {
 
 export default function CartPage() {
   return (
-    <div className='px-4 py-16 sm:px-6 lg:px-8'>
-      <h2 className='mb-12 text-3xl font-bold'>Shopping Cart</h2>
-      <div className='gap-x-12 lg:grid lg:grid-cols-12 lg:items-start'>
+    <>
+      <h2 className='mb-4 text-3xl font-bold'>Shopping Cart</h2>
+      <div className='lg:grid lg:grid-cols-12 lg:items-start lg:gap-x-12'>
         <CartList />
         <Summary />
       </div>
-    </div>
+    </>
   );
 }

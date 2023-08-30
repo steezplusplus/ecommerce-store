@@ -19,12 +19,12 @@ export function CartItem(props: CartItemProps) {
   };
 
   return (
-    <li className='flex border-b py-6'>
+    <li className='flex border-b py-6 first:pt-0'>
       <div className='relative h-24 w-24 overflow-hidden rounded-md sm:h-48 sm:w-48'>
         <Image
           fill
           src={data.images[0].url}
-          alt=''
+          alt={`Image of ${data.name}`}
           className='object-cover object-center'
         />
       </div>
