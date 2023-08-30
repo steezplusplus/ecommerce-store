@@ -32,13 +32,16 @@ export function Filter(props: FilterProps) {
       newParams[valueKey] = null;
     }
 
-    const url = qs.stringifyUrl({
-      url: window.location.href,
-      query: newParams,
-    }, { skipNull: true });
+    const url = qs.stringifyUrl(
+      {
+        url: window.location.href,
+        query: newParams,
+      },
+      { skipNull: true }
+    );
 
-    router.push(url);
-  }
+    router.push(url, { scroll: false });
+  };
 
   return (
     <fieldset>
@@ -49,14 +52,19 @@ export function Filter(props: FilterProps) {
             <Button
               aria-pressed={selectedValue === filter.id}
               onClick={() => onToggle(filter.id)}
-              style={{ backgroundColor: filter.value, color: filter.value === '#FFFFFF' ? 'black' : 'white' }}
-              className='rounded-md text-sm p-2 border border-gray-300 aria-pressed:text-xl aria-pressed:transition'
+              style={{
+                backgroundColor: filter.value,
+                color: filter.value === '#FFFFFF' ? 'black' : 'white',
+              }}
+              className='group rounded-md border border-gray-300 p-2 text-sm'
             >
-              {filter.name}
+              <span className='group-aria-pressed:underline group-aria-pressed:transition'>
+                {filter.name}
+              </span>
             </Button>
           </div>
         ))}
       </div>
-    </fieldset >
+    </fieldset>
   );
 }
