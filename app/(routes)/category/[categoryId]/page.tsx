@@ -45,25 +45,29 @@ export default async function CategoryPage(props: CategoryPageProps) {
   const category = await getCategory(categoryId);
 
   return (
-    <div className='flex flex-col'>
+    <>
       <Billboard data={category.billboard} />
-      <div className='px-4 sm:px-6 lg:px-8'>
-        <div className='lg:grid lg:grid-cols-5 lg:gap-x-8'>
+      <div className='mb-4 mt-6 flex items-center justify-between'>
+        <h3 className='text-3xl font-bold'>{category.name}</h3>
+        <span className='block lg:hidden'>
           <MobileFilter colors={colors} />
-          <div className='hidden lg:block'>
-            <Filter valueKey='colorId' name='Colors' data={colors} />
-          </div>
+        </span>
+      </div>
 
-          <div className='mt-6 lg:col-span-4 lg:mt-0'>
-            {products.length === 0 && <NoResults />}
-            <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3'>
-              {products.map((product) => (
-                <ProductCard key={product.id} data={product} />
-              ))}
-            </div>
+      <div className='lg:grid lg:grid-cols-4 lg:gap-x-8'>
+        <div className='hidden lg:col-span-1 lg:block'>
+          <Filter valueKey='colorId' name='Colors' data={colors} />
+        </div>
+
+        <div className='lg:col-span-3'>
+          {products.length === 0 && <NoResults />}
+          <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3'>
+            {products.map((product) => (
+              <ProductCard key={product.id} data={product} />
+            ))}
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

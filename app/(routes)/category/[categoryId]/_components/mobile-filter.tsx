@@ -22,7 +22,7 @@ export function MobileFilter(props: MobileFilterProps) {
       <Button
         aria-pressed={isOpen}
         onClick={() => setIsOpen(true)}
-        className='flex items-center lg:hidden text-white'
+        className='flex items-center text-white'
       >
         <span className='mr-2'>Filters</span>
         <Plus size={20} />
@@ -30,19 +30,15 @@ export function MobileFilter(props: MobileFilterProps) {
       <Dialog
         open={isOpen}
         onClose={() => setIsOpen(false)}
-        className='relative z-40 lg:hidden'
+        className='relative z-40'
       >
         <div className='fixed inset-0 bg-black bg-opacity-25'>
-          <Dialog.Panel className='relative ml-auto h-full w-full max-w-xs flex flex-col overflow-y-auto bg-white py-4 pb-6 shadow-xl'>
+          <Dialog.Panel className='relative ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white py-4 pb-6 shadow-xl'>
             <div className='flex items-center justify-end px-4'>
               <IconButton icon={<X />} onClick={() => setIsOpen(false)} />
             </div>
             <div className='p-4'>
-              <Filter
-                valueKey='colorId'
-                name='Colors'
-                data={colors}
-              />
+              <Filter valueKey='colorId' name='Colors' data={colors} />
             </div>
           </Dialog.Panel>
         </div>
