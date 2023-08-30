@@ -55,10 +55,10 @@ npm run dev
 | :------ | :--------------------------------------- |
 | `dev`   | Starts a development instance of the app |
 
-### Entity Relationship Diagram
+## Entity Relationship Diagram
 
 ![ER Diagram](diagrams/er-diagram.svg)
 
-### MIT License
+## MIT License
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE.md)
