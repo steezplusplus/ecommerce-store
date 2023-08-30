@@ -26,6 +26,7 @@ export function CartItem(props: CartItemProps) {
           src={data.images[0].url}
           alt={`Image of ${data.name}`}
           className='object-cover object-center'
+          sizes='30vw'
         />
       </div>
       <div className='relative ml-4 flex flex-1 flex-col justify-between sm:ml-6'>
