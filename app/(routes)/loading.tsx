@@ -8,6 +8,7 @@ export default function Loading() {
         <LoadingSkeleton className='aspect-square w-full rounded-xl md:aspect-[2.4/1]' />
       </div>
       {/* Product List */}
+      <div className='h-12' />
       <div className='px-4 sm:px-6 lg:px-8'>
         <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
           <LoadingSkeleton className='aspect-square rounded-xl' />
