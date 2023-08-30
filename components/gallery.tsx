@@ -1,13 +1,13 @@
 'use client';
 
-import NextImage from 'next/image';
+import Image from 'next/image';
 import { Tab } from '@headlessui/react';
 
 import { cn } from '@/lib/utils';
-import { Image } from '@/types';
+import { Image as ImageType } from '@/types';
 
 type GalleryProps = {
-  images: Image[];
+  images: ImageType[];
   name: string;
 };
 
@@ -26,11 +26,13 @@ export function Gallery(props: GalleryProps) {
         {images.map((image) => (
           <Tab.Panel key={image.id}>
             <div className='relative aspect-square h-full w-full overflow-hidden sm:rounded-lg'>
-              <NextImage
+              <Image
                 fill
                 src={image.url}
                 alt={`Image of ${name}`}
                 className='object-cover object-center'
+                sizes='(max-width: 1024px) 100vw, 50vw'
+                priority={true}
               />
             </div>
           </Tab.Panel>
@@ -41,7 +43,7 @@ export function Gallery(props: GalleryProps) {
 }
 
 type GalleryTabProps = {
-  image: Image;
+  image: ImageType;
   name: string;
 };
 
@@ -52,11 +54,12 @@ function GalleryTab(props: GalleryTabProps) {
       {({ selected }) => (
         <div>
           <span className='absolute inset-0 aspect-square h-full w-full overflow-hidden rounded-md'>
-            <NextImage
+            <Image
               fill
               src={image.url}
               alt={`Image of ${name}`}
               className='object-cover object-center'
+              sizes='(max-width: 1024px) 100vw, 20vw'
             />
           </span>
           <span
