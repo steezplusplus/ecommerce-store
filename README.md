@@ -55,7 +55,7 @@ npm run dev
 | :------ | :--------------------------------------- |
 | `dev`   | Starts a development instance of the app |
 
-### Diagrams
+### Entity Relationship Diagram
 
 ![ER Diagram](diagrams/er-diagram.svg)
 
