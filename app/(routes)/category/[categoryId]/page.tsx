@@ -31,6 +31,7 @@ export async function generateMetadata(
   };
 }
 
+// TODO Only get colors that exist for the current categoryId
 export default async function CategoryPage(props: CategoryPageProps) {
   const { params, searchParams } = props;
   const { categoryId } = params;
