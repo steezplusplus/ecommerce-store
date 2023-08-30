@@ -47,7 +47,7 @@ export default async function CategoryPage(props: CategoryPageProps) {
 
   return (
     <>
-      <Billboard data={category.billboard} />
+      <Billboard alt='Image of clothes' billboard={category.billboard} />
       <div className='mb-4 mt-6 flex items-center justify-between'>
         <h3 className='text-3xl font-bold'>{category.name}</h3>
         <span className='block lg:hidden'>

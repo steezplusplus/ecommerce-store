@@ -18,7 +18,7 @@ export default async function HomePage() {
 
   return (
     <>
-      <Billboard data={billboard} />
+      <Billboard alt='Image of clothes' billboard={billboard} />
       <h3 className='mb-4 mt-6 text-3xl font-bold'>Featured Products</h3>
 
       {products.length === 0 ? (
