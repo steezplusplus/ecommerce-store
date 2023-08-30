@@ -39,7 +39,7 @@ export default async function ProductPage(props: ProductPageProps) {
   return (
     <>
       <div className='lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8'>
-        <Gallery images={product.images} />
+        <Gallery name={product.name} images={product.images} />
         <div className='sm:mt-16 lg:mt-0'>
           <Info data={product} />
         </div>

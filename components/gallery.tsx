@@ -8,16 +8,17 @@ import { Image } from '@/types';
 
 type GalleryProps = {
   images: Image[];
+  name: string;
 };
 
 export function Gallery(props: GalleryProps) {
-  const { images } = props;
+  const { images, name } = props;
   return (
     <Tab.Group as='div' className='flex flex-col-reverse'>
       <div className='mx-auto mt-6 hidden w-full max-w-2xl sm:block lg:max-w-none'>
         <Tab.List className='grid grid-cols-4 gap-6'>
           {images.map((image) => (
-            <GalleryTab key={image.id} image={image} />
+            <GalleryTab key={image.id} image={image} name={name} />
           ))}
         </Tab.List>
       </div>
@@ -28,7 +29,7 @@ export function Gallery(props: GalleryProps) {
               <NextImage
                 fill
                 src={image.url}
-                alt='Image' // TODO
+                alt={`Image of ${name}`}
                 className='object-cover object-center'
               />
             </div>
@@ -41,10 +42,11 @@ export function Gallery(props: GalleryProps) {
 
 type GalleryTabProps = {
   image: Image;
+  name: string;
 };
 
 function GalleryTab(props: GalleryTabProps) {
-  const { image } = props;
+  const { image, name } = props;
   return (
     <Tab className='relative flex aspect-square cursor-pointer items-center justify-center rounded-md bg-white'>
       {({ selected }) => (
@@ -53,7 +55,7 @@ function GalleryTab(props: GalleryTabProps) {
             <NextImage
               fill
               src={image.url}
-              alt='' // TODO
+              alt={`Image of ${name}`}
               className='object-cover object-center'
             />
           </span>
