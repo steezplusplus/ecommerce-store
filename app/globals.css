@@ -12,6 +12,7 @@ body > nav {
 
 body > main {
   grid-area: main;
+  @apply p-4 sm:p-6 lg:p-8;
 }
 
 body > footer {
