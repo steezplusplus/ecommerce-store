@@ -44,10 +44,10 @@ export function Filter(props: FilterProps) {
 
   return (
     <fieldset>
-      <legend className='text-lg font-semibold'>{name}</legend>
-      <div className='flex flex-wrap gap-2'>
+      <legend className="text-lg font-semibold">{name}</legend>
+      <div className="flex flex-wrap gap-2">
         {data.map((filter) => (
-          <div key={filter.id} className='flex items-center'>
+          <div key={filter.id} className="flex items-center">
             <Button
               aria-pressed={selectedValue === filter.id}
               onClick={() => onToggle(filter.id)}
@@ -55,9 +55,9 @@ export function Filter(props: FilterProps) {
                 backgroundColor: filter.value,
                 color: filter.value === '#FFFFFF' ? 'black' : 'white',
               }}
-              className='group rounded-md border border-gray-300 p-2 text-sm'
+              className="group rounded-md border border-gray-300 p-2 text-sm"
             >
-              <span className='group-aria-pressed:underline group-aria-pressed:transition'>
+              <span className="group-aria-pressed:underline group-aria-pressed:transition">
                 {filter.name}
               </span>
             </Button>

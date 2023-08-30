@@ -24,26 +24,26 @@ export function Info(props: InfoProps) {
 
   return (
     <div>
-      <h2 className='mb-4 text-3xl font-bold text-gray-900'>{data.name}</h2>
-      <Currency value={data.price} className='text-2xl text-gray-900' />
-      <hr className='my-4' />
+      <h2 className="mb-4 text-3xl font-bold text-gray-900">{data.name}</h2>
+      <Currency value={data.price} className="text-2xl text-gray-900" />
+      <hr className="my-4" />
 
-      <div className='flex items-center gap-x-4'>
-        <h3 className='font-semibold text-black'>Color:</h3>
+      <div className="flex items-center gap-x-4">
+        <h3 className="font-semibold text-black">Color:</h3>
         <div
-          className='h-6 w-6 rounded-full border border-gray-600'
+          className="h-6 w-6 rounded-full border border-gray-600"
           style={{ backgroundColor: data.color.value }}
         >
-          <p className='sr-only'>{data.color.name}</p>
+          <p className="sr-only">{data.color.name}</p>
         </div>
       </div>
 
       <Button
         onClick={onAdd}
-        className='mt-4 flex items-center gap-x-2 text-white'
+        className="mt-4 flex items-center gap-x-2 text-white"
       >
         <ShoppingCart size={20} />
-        <span className='ml-2 text-lg font-medium text-white'>Add to cart</span>
+        <span className="ml-2 text-lg font-medium text-white">Add to cart</span>
       </Button>
     </div>
   );

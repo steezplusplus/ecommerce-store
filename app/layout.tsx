@@ -21,7 +21,7 @@ export default function RootLayout(props: RootLayoutProps) {
   const { children } = props;
 
   return (
-    <html lang='en'>
+    <html lang="en">
       <body className={font.className}>
         <ModalProvider />
         <ToastProvider />

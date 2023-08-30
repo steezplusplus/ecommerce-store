@@ -47,22 +47,22 @@ export default async function CategoryPage(props: CategoryPageProps) {
 
   return (
     <>
-      <Billboard alt='Image of clothes' billboard={category.billboard} />
-      <div className='mb-4 mt-6 flex items-center justify-between'>
-        <h3 className='text-3xl font-bold'>{category.name}</h3>
-        <span className='block lg:hidden'>
+      <Billboard alt="Image of clothes" billboard={category.billboard} />
+      <div className="mb-4 mt-6 flex items-center justify-between">
+        <h3 className="text-3xl font-bold">{category.name}</h3>
+        <span className="block lg:hidden">
           <MobileFilter colors={colors} />
         </span>
       </div>
 
-      <div className='lg:grid lg:grid-cols-4 lg:gap-x-8'>
-        <div className='hidden lg:col-span-1 lg:block'>
-          <Filter valueKey='colorId' name='Colors' data={colors} />
+      <div className="lg:grid lg:grid-cols-4 lg:gap-x-8">
+        <div className="hidden lg:col-span-1 lg:block">
+          <Filter valueKey="colorId" name="Colors" data={colors} />
         </div>
 
-        <div className='lg:col-span-3'>
+        <div className="lg:col-span-3">
           {products.length === 0 && <NoResults />}
-          <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3'>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
             {products.map((product) => (
               <ProductCard key={product.id} data={product} />
             ))}

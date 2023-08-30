@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 export default function CartPage() {
   return (
     <>
-      <h2 className='mb-4 text-3xl font-bold'>Shopping Cart</h2>
-      <div className='lg:grid lg:grid-cols-12 lg:items-start lg:gap-x-12'>
+      <h2 className="mb-4 text-3xl font-bold">Shopping Cart</h2>
+      <div className="lg:grid lg:grid-cols-12 lg:items-start lg:gap-x-12">
         <CartList />
         <Summary />
       </div>

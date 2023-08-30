@@ -33,37 +33,37 @@ export function ProductCard(props: ProductCardProps) {
   return (
     <Link
       href={`/product/${data.id}`}
-      className='group space-y-4 rounded-xl border bg-white p-3'
+      className="group space-y-4 rounded-xl border bg-white p-3"
     >
       {/* Images and Actions */}
-      <div className='rounded-cl relative aspect-square bg-gray-100'>
+      <div className="rounded-cl relative aspect-square bg-gray-100">
         <Image
-          className='aspect-square rounded-md object-cover'
+          className="aspect-square rounded-md object-cover"
           src={data?.images?.[0]?.url}
           fill
-          sizes='(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw'
+          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
           alt={`Image of ${data.name}`}
         />
-        <div className='absolute bottom-5 w-full px-6 opacity-0 transition group-hover:opacity-100 '>
-          <div className='flex justify-center gap-x-6'>
+        <div className="absolute bottom-5 w-full px-6 opacity-0 transition group-hover:opacity-100 ">
+          <div className="flex justify-center gap-x-6">
             <IconButton
               onClick={onPreview}
-              icon={<Expand size={20} className='text-gray-600' />}
+              icon={<Expand size={20} className="text-gray-600" />}
             />
             <IconButton
               onClick={onAdd}
-              icon={<ShoppingCart size={20} className='text-gray-600' />}
+              icon={<ShoppingCart size={20} className="text-gray-600" />}
             />
           </div>
         </div>
       </div>
       {/* Info */}
       <div>
-        <p className='text-lg font-semibold'>{data.name}</p>
-        <p className='text-sm text-gray-500'>{data.category.name}</p>
+        <p className="text-lg font-semibold">{data.name}</p>
+        <p className="text-sm text-gray-500">{data.category.name}</p>
       </div>
       {/* Price */}
-      <div className='flex items-center justify-center'>
+      <div className="flex items-center justify-center">
         <Currency value={data.price} />
       </div>
     </Link>

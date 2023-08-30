@@ -7,7 +7,7 @@ interface PreviewModalStore {
   data?: Product;
   onOpen: (data: Product) => void;
   onClose: () => void;
-};
+}
 
 export const usePreviewModal = create<PreviewModalStore>((set) => ({
   isOpen: false,

@@ -40,11 +40,11 @@ export function NavLinks(props: NavLinksProps) {
           <li key={href}>
             <Link
               href={href}
-              className='group text-sm font-medium transition duration-300'
+              className="group text-sm font-medium transition duration-300"
               aria-current={ariaCurrent}
             >
               {label}
-              <span className='block h-0.5 max-w-0 bg-black transition-all duration-700 group-aria-[current=page]:max-w-full' />
+              <span className="block h-0.5 max-w-0 bg-black transition-all duration-700 group-aria-[current=page]:max-w-full" />
             </Link>
           </li>
         );
