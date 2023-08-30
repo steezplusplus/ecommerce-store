@@ -1,5 +1,4 @@
 import { Product } from '@/types';
-import { NoResults } from '@/components/no-results';
 import { ProductCard } from '@/components/product-card';
 
 type ProductListProps = {
