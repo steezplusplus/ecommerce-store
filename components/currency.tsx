@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 
 type CurrencyProps = {
   value?: string | number;
+  className?: string;
 };
 
 function priceFormatter() {
@@ -13,8 +14,9 @@ function priceFormatter() {
   });
 }
 
+// TODO Why is this a client component? For using INTL?
 export function Currency(props: CurrencyProps) {
-  const { value = 0 } = props;
+  const { value = 0, className } = props;
   const [isMounted, setIsMounted] = useState<boolean>(false);
 
   useEffect(() => {
@@ -26,6 +28,8 @@ export function Currency(props: CurrencyProps) {
   }
 
   return (
-    <p className='font-semibold'>{priceFormatter().format(Number(value))}</p>
+    <p className={`font-semibold ${className}`}>
+      {priceFormatter().format(Number(value))}
+    </p>
   );
 }
