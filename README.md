@@ -2,6 +2,8 @@
 
 - A dynamic and engaging online shopping experience created powered by [E-commerce Admin](https://github.com/steezplusplus/ecommerce-admin).
 
+![Homepage Screenshot](diagrams/homepage-example.png)
+
 ## Built with
 
 - [E-commerce Admin](https://github.com/steezplusplus/ecommerce-admin)
