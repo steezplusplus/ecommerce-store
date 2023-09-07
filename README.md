@@ -7,7 +7,7 @@
     </h1>
     <img src="diagrams/homepage-example.png" alt="picture of my store" />
     <h2>
-      A dynamic and engaging online shopping experience created powered by
+      A dynamic and engaging online shopping experience created with
       <br />
       <a href="https://github.com/steezplusplus/ecommerce-admin">E-commerce Admin</a>.
     </h2>
