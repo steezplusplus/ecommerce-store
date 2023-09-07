@@ -57,7 +57,7 @@
   <section>
     <h2>Support me!</h2>
     <p>
-      If you liked my garden then
+      If you liked my e-commerce store
       <br />
       <em>Leave a ⭐</em>
     </p>
