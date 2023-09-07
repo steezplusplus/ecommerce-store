@@ -15,37 +15,37 @@
   <section>
     <a href="https://github.com/steezplusplus/ecommerce-store/stargazers" target="_blank" >
       <img
-        alt="Jesses's garden number of stargazers"
-        title="Jesses's garden number of stargazers"
-        src="https://custom-icon-badges.demolab.com/github/stars/steezplusplus/digital-garden?logo=star"
+        alt="E-commerce store number of stargazers"
+        title="E-commerce store number of stargazers"
+        src="https://custom-icon-badges.demolab.com/github/stars/steezplusplus/ecommerce-store?logo=star"
       />
     </a>
     <a href="https://github.com/steezplusplus/ecommerce-store/issues" target="_blank" >
       <img
-        alt="Jesses's garden number of issues"
-        title="Jesses's garden number of issues"
-        src="https://custom-icon-badges.demolab.com/github/issues-raw/steezplusplus/digital-garden?logo=issue"
+        alt="E-commerce store number of issues"
+        title="E-commerce store number of issues"
+        src="https://custom-icon-badges.demolab.com/github/issues-raw/steezplusplus/ecommerce-store?logo=issue"
       />
     </a>
     <a href="/LICENSE" target="_blank" >
       <img
-        alt="Jesses's garden license"
-        title="Jesses's garden license"
-        src="https://custom-icon-badges.demolab.com/github/license/steezplusplus/digital-garden?logo=law"
+        alt="E-commerce store license"
+        title="E-commerce store license"
+        src="https://custom-icon-badges.demolab.com/github/license/steezplusplus/ecommerce-store?logo=law"
       />
     </a>
     <a href="#">
       <img
-        alt="Jesses's garden last commit time"
-        title="Jesses's garden last commit time"
-        src="https://custom-icon-badges.demolab.com/github/last-commit/steezplusplus/digital-garden?logo=history&logoColor=white"
+        alt="E-commerce store last commit time"
+        title="E-commerce store last commit time"
+        src="https://custom-icon-badges.demolab.com/github/last-commit/steezplusplus/ecommerce-store?logo=history&logoColor=white"
       />
     </a>
     <a href="#">
       <img
-        alt="Jesses's garden num of bytes"
-        title="Jesses's garden num of bytes"
-        src="https://custom-icon-badges.demolab.com/github/languages/code-size/steezplusplus/digital-garden?logo=file-code&logoColor=white"
+        alt="E-commerce store num of bytes"
+        title="E-commerce store num of bytes"
+        src="https://custom-icon-badges.demolab.com/github/languages/code-size/steezplusplus/ecommerce-store?logo=file-code&logoColor=white"
       />
     </a>
   </section>
@@ -79,7 +79,7 @@
       Find an issue?
       <br />
       <em>
-        <a href="https://github.com/steezplusplus/digital-garden/issues" target="_blank">Please open an issue</a>
+        <a href="https://github.com/steezplusplus/ecommerce-store/issues" target="_blank">Please open an issue</a>
       </em>
     </p>
   </section>
