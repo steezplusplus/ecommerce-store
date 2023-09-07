@@ -51,7 +51,7 @@
   </section>
   <section>
     <h2>Built with</h2>
-    <p>typescript - postcss - eslint - prettier - tailwind - vercel - nextjs13 - cloudinary - clerk - supabase</p>
+    <p>typescript - postcss - eslint - prettier - tailwind - vercel - nextjs13 - cloudinary - clerk - prisma - supabase</p>
   </section>
   <br />
   <section>
