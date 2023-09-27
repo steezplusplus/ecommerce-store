@@ -1,17 +1,18 @@
-<div align="center">
+<div>
+  <!-- Heading -->
   <section>
     <h1>
       <a href="https://ecommerce-store-steez.vercel.app/" target="_blank" >
-        Visit my e-commerce store
+        View an engaging shopping experience
       </a>
     </h1>
     <img src="diagrams/homepage-example.png" alt="picture of my store" />
     <h2>
-      A dynamic and engaging online shopping experience created with
-      <br />
+      Powered by
       <a href="https://github.com/steezplusplus/ecommerce-admin">E-commerce Admin</a>.
     </h2>
   </section>
+  <!-- Badges -->
   <section>
     <a href="https://github.com/steezplusplus/ecommerce-store/stargazers" target="_blank" >
       <img
@@ -49,41 +50,21 @@
       />
     </a>
   </section>
+  <!-- Tech Stack -->
   <section>
     <h2>Built with</h2>
     <p>typescript - postcss - eslint - prettier - tailwind - vercel - nextjs13 - cloudinary - clerk - prisma</p>
   </section>
-  <br />
+  <!-- Support -->
   <section>
     <h2>Support me!</h2>
+    <a href="https://ko-fi.com/W7W5PB4J9" target="_blank"> 
+      <img src="https://ko-fi.com/img/githubbutton_sm.svg"/> 
+    </a>
     <p>
-      If you liked my e-commerce store
-      <br />
-      <em>Leave a ⭐</em>
-    </p>
-    <p>
-      Have a question?
-      <br />
-      <em>
-        <a href="https://twitter.com/CodingSteez" target="_blank">Send me a tweet</a>
-      </em>
-    </p>
-    <p>
-      Want to use my code?
-      <br />
-      <em>
-        Go ahead! If you make anything cool, I'd love to see it.
-      </em>
-    </p>
-    <p>
-      Find an issue?
-      <br />
-      <em>
-        <a href="https://github.com/steezplusplus/ecommerce-store/issues" target="_blank">Please open an issue</a>
-      </em>
+      <i>Or leave a ⭐</i>
     </p>
   </section>
-  <br />
 </div>
 
 ## Features
@@ -98,16 +79,20 @@
 
 2. Clone this project
 
+```shell
+git clone ...
+```
+
 3. Install Dependencies
 
 ```shell
-npm i
+npm install
 ```
 
-4. Get `NEXT_PUBLIC_API_URL` from [E-commerce Admin](https://github.com/steezplusplus/). Place it in `.env`
+4. Generate your dotenv file. Follow the instructions in the file to get the env variables.
 
 ```shell
-NEXT_PUBLIC_API_URL=
+cp .env.example .env
 ```
 
 5. If not already running, start the Admin: [E-commerce Admin](https://github.com/steezplusplus/)
@@ -124,10 +109,12 @@ npm run dev
 
 ## Available commands
 
-| command | description                              |
-| :------ | :--------------------------------------- |
-| `dev`   | Starts a development instance of the app |
-
-## Entity Relationship Diagram
-
-![ER Diagram](diagrams/er-diagram.svg)
+| command        | description                              |
+| :------------- | :--------------------------------------- |
+| `dev`          | Starts a development instance of the app |
+| `build`        | Builds a production instance of the app  |
+| `start`        | Starts a production instance of the app  |
+| `lint`         | Runs ESLint                              |
+| `lint:fix`     | Runs ESLint and fixes syntax             |
+| `prettier`     | Runs Prettier                            |
+| `prettier:fix` | Runs Prettier and fixes formatting       |
